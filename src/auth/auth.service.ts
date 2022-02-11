@@ -30,6 +30,6 @@ export class AuthService {
   }
 
   validateUser(userId: number) {
-      return this.prisma.user.findUnique({ where: { id: userId } });
+    return this.prisma.user.findUnique({ where: { id: userId } });
   }
 }

@@ -8,15 +8,18 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe());
 
-  const config  = new DocumentBuilder()
-  .setTitle('Cargo five test')
-  .setDescription('Test')
-  .setVersion('1.0')
-  .addTag('cargo five')
-  .build();
+  const config = new DocumentBuilder()
+    .addBearerAuth()
+    .setTitle('Cargo five test')
+    .setDescription('Test')
+    .setVersion('1.0')
+    .addTag('cargo five')
+    .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document, { customSiteTitle: 'Cargo five test' });
+  SwaggerModule.setup('api', app, document, {
+    customSiteTitle: 'Cargo five test',
+  });
 
   await app.listen(3000);
 }
