@@ -11,7 +11,7 @@ datasource db {
 }
 
 model User {
-  id        String @id @default(cuid())
+  id        Int @id @default(autoincrement())
   createdAt DateTime @default(now())
   updateAt  DateTime @updatedAt
 
@@ -23,11 +23,11 @@ model User {
 }
 
 model Post {
-  id          String @id @default(cuid())
+  id          Int @id @default(autoincrement())
   publishedAt DateTime @default(now())
 
   author      User @relation(fields: [authorId], references: [id])
-  authorId    String
+  authorId    Int
   sourceLink  String
   category    String
   bodyDesc    String
