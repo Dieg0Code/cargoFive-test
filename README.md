@@ -14,7 +14,7 @@
     - La app corre en el ``puerto 3000``.
     - Está integrada con Swagger, en la ruta ``/api`` se puede ver la documentación.
 
-## Installation de Dependencias
+## Instalación de Dependencias
 
 ```bash
 $ npm install
