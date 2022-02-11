@@ -18,7 +18,7 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document, {
-    customSiteTitle: 'Cargo five test',
+    customSiteTitle: 'Cargofive Test',
   });
 
   await app.listen(3000);
